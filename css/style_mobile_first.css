@@ -1,0 +1,393 @@
+@import url("/css/menu.css");
+
+/* BODY */
+
+body {
+    background: linear-gradient(180deg, #E5EFFF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%);
+    padding: 0.6em 1.1em 0 ;
+}
+/* INTRO */
+.searpent_logo img {
+    width: 50%;
+}
+
+/* nav main cover */
+ 
+
+/* hero_section */
+.hero_text h1 {
+    font-size: 4em;
+    margin-bottom: 0.75rem;
+}
+.hero_text h6 {
+    margin-bottom: 2rem;
+}
+
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3%;
+
+}
+.cover_link  a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #36A8FF;
+    padding: 0.7em 3em;
+    font-size: 4vw;
+    border-radius: 10px;
+    display: block;
+
+}
+.cover p {
+    display: block;
+}
+.cover_2 {
+    display: flex;
+    align-items: center;
+}
+.cover_2 a {
+    margin-right: 1vw;
+}
+
+
+
+
+
+
+.hero_car {
+    position: relative;
+    overflow: hidden;
+}
+/*toto je mobil img, ktory sa zobrazi pri vacsom width*/
+.phone {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+/*toto je mobil img, ktory je pri rozliseni pod 576px*/
+.phone_small {
+    width: 48%;
+    position: absolute;
+    top: 4%;
+    right: 5%;
+}
+@media (max-width:483px) {
+    .phone_small {
+        top: 9%;
+    } 
+}
+@media (max-width:400px) {
+    .phone_small {
+        top: 13%;
+    } 
+}
+@media (min-width:576px) {
+    .phone {
+        visibility: visible;
+    }
+    .phone_small {
+        visibility: hidden;
+    }
+}
+
+.car {
+    width: 110%;
+    margin: 10rem 0;
+}
+.vector {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+    width: 80%;
+}
+.line {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    z-index: -1;
+    width: 10%;
+}
+.decoration {
+    position: absolute;
+    top: 19%;
+    left: 13%;
+    width: 40%;
+}
+.chartab {
+    position: absolute;
+    top: -9%;
+    right: 0;
+    z-index: -2;
+    width: 40%;
+}
+@media (max-width:400px) {
+    .chartab {
+        top: -1%;
+    }   
+}
+/*HERO_SECTION MEDIA QUERIES*/
+/*.........................................*/
+/*.........................................*/
+@media(max-width:576px){
+    .hero_text > p {
+        display: none;
+    }
+}
+@media (max-width:450px) {
+    .hero_text h1 {
+        font-size: 10vw;
+    }
+}
+
+/*************************************************************/
+/*************************************************************/
+
+/*                    BENEFITS SECTION                       */
+
+/*************************************************************/
+/*************************************************************/
+
+.benefits {
+    margin-bottom: 10rem;
+}
+.benefits h2 {
+    font-size: 3.125rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+} 
+@media (max-width:435px) {
+    .benefits h2 {
+        font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
+    }
+    
+}
+.benefits-flex {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: center;
+    gap: 2em;
+}
+.benefits-flex > div {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1em 2em;
+    box-shadow: 0px 14px 12px 2px rgba(0, 0, 0, 0.082), 0px 14px 12px 2px rgba(0, 0, 0, 0.082) ;
+}
+.benefits-flex > div p {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.625rem;
+}
+
+/*******************************************
+                    MEDIA QUERIS FOR BENEFITS
+*******************************************/
+@media (max-width:575px) {
+    .benefits-flex > div h4 {
+        margin-bottom: 1rem;
+        font-size: clamp(1rem, 1vw + 1.5rem, 1.5rem);
+    }
+    
+}
+@media (max-width:450px) {
+    .benefits-flex > div {
+        padding: 0.5em 1em;
+    }
+    .benefits-flex > div h4 {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:350px) {
+    .benefits-flex {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+    }
+    .benefits-flex > div {
+        padding: 1em 1.5em;
+    }
+    .benefits-flex > div h4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/*************************************************************/
+/*************************************************************/
+
+/*                    renowned SECTION                       */
+
+/*************************************************************/
+/*************************************************************/
+.renowned {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+.renowned_start h3 {
+    font-size: 3.125rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin-bottom: 1.125rem;
+}
+.renowned_start p {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    opacity: 0.6;
+    margin-bottom: 2em;
+}
+.renowned_flex {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.windov {
+    display: flex;
+    flex-direction: column;
+}
+.windov img {
+    width: 65%;
+}
+.windov p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    width: 65%;
+    align-self: flex-start;
+    font-size: 1.5rem;
+}
+.windov :nth-child(3) {
+    opacity: 0.6;
+    font-size: 1.125rem;
+    width: 65%;
+    margin-bottom: 1.5em;
+    line-height: 1.625rem;
+}
+
+
+.light {
+    display: flex;
+    flex-direction: column;
+
+}
+.light img {
+    width: 65%;
+    align-self: center;
+}
+.light p {
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    width: 65%;
+    align-self: center;
+}
+.light :nth-child(3) {
+    opacity: 0.6;
+    font-size: 1.125rem;
+    margin-bottom: 1.5em;
+    line-height: 1.625rem;
+    width: 65%;
+    align-self: center;
+}
+.women {
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.women img {
+    width: 65%;
+    align-self: flex-end;
+}
+.women p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    line-height: 1.625rem;
+    width: 65%;
+    align-self: flex-end;
+}
+.women :nth-child(3) {
+    opacity: 0.6;
+    font-size: 1.125rem;
+    margin-bottom: 1.5em;
+    line-height: 1.625rem;
+    width: 65%;
+    align-self: flex-end;    
+}
+
+@media (max-width:400px) {
+    .windov img,
+    .windov p,
+    .windov :nth-child(3),
+    
+    .light img,
+    .light p,
+    .light :nth-child(3),
+    
+    .women img,
+    .women p,
+    .women :nth-child(3){
+        align-self: center;
+        text-align: center;
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************
+Hamburger menu 
+**************************/
+
+.menu-wrap .hamburger {
+    left: 36px;
+}
+.menu-wrap .toggler {
+    right: -5.3rem;
+}
+.menu-wrap {
+    visibility: hidden;
+}
+@media (max-width:578px) {
+    .menu-wrap {
+        visibility: visible;
+    }
+}    
+@media (max-width:579px) {
+    .nav_choise {
+        visibility: hidden;
+    }
+    
+}

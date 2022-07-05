@@ -1,0 +1,362 @@
+/*Style guide
+font-family: 'Raleway', sans-serif; (nav bar links)
+sign in color - #36A8FF
+*/
+@import url("/css/menu.css");
+/*******************
+BODY style
+*******************/
+body {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    background: linear-gradient(180deg, #E5EFFF 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%);
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/***********************
+NAV STYLE
+***********************/
+.intro {
+    position: relative;
+}
+.nav_main_cover {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 0 3% 0;
+}
+@media (max-width:568px) {
+    .nav_main_cover {
+        justify-content: flex-start;
+        margin-left: 3em;
+    }
+}
+.nav_choise {
+    display: flex;
+    gap: 2rem;
+}
+.nav_choise a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color:#000000;
+    line-height: 22px;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.125rem  /*was 18px*/;
+}
+.nav_choise a:hover{
+    text-decoration: underline;
+    text-decoration-color: #3f48cc;
+    text-decoration-thickness: 2px;
+}
+.nav_choise a:nth-child(5){
+    color: #36A8FF;
+}
+
+/**************************
+Hamburger menu 
+**************************/
+.menu-wrap {
+    visibility: hidden;
+}
+@media (max-width:580px) {
+    .menu-wrap {
+        visibility: visible;
+
+    }
+    
+}
+
+
+
+
+
+/**************************
+NAV MEDIA QUERIES
+***************************/
+
+@media (max-width:580px) {
+    .nav_choise {
+        display: none;
+    }  
+    
+}
+
+
+
+
+
+
+/***********************
+HERO-SECTION
+***********************/
+
+.hero_section {
+    width: 81.59%; /* convert 1175px/1440px * 100 = 81.59%*/
+    margin: 0 auto;
+    display: flex;
+}
+
+@media (max-width:568px) {
+    .hero_section{
+        flex-direction: column;
+    }
+    .hero_text h1 {
+        font-size: 3rem;
+    }
+    .hero_text  p {
+        display: none;
+    }
+    .cover {
+        justify-content: space-around;
+    }
+    .cover p {
+        display: block;
+    }
+    .cover a:nth-child(1) {
+        font-size: 1rem;
+    }
+}
+
+
+
+/***********************
+HERO-SECTION  text
+***********************/
+.hero_text {
+    flex: 1;
+    
+}
+.hero_text h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 5vw, 4.6rem);
+    line-height: clamp(35px, 5vw, 80px); /*80px*/
+    color: #272D4E;
+}
+.hero_text p {
+    color: #778484;
+    margin-top: 3%;
+    padding-right: 18%;
+    font-size: clamp(0.8rem, .5vw + 1rem, 1.125rem);
+    line-height: clamp( 1rem , 1vw + 1rem,1.625rem);
+    font-weight: 500;
+}
+.hero_text h6 {
+    margin-top: 3%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.938rem;
+    font-size: clamp(0.638rem, .6vw + .4rem, 0.938rem);
+    line-height: 26px;
+    color: #272D4E;
+    margin-bottom: 2rem;
+}
+.cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+.cover a:nth-child(1){
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp( 0.5em ,0.5vw + 0.3335em ,1.125em); /*was 18px*/
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #36A8FF;
+    border-radius: 10px;
+    padding: 1.25em 4.438em 1.188em 4.438em;
+    margin-right: 4%; /*was 2.125rem*/
+}
+@media (min-width:580px) and (max-width:712px) {
+    .cover a:nth-child(1) {
+        padding: 3% 7.4%;
+    }
+    
+}
+.cover p {
+    margin: 0;
+    padding: 0;
+    margin-left: 1%; /*was 0.688rem*/
+    font-size: clamp( 0.638rem, .6vw + .4rem, 0.938rem);
+}
+
+/***********************
+HERO-SECTION  car
+***********************/
+.hero_car {
+    position: relative;
+    flex: 1;
+    
+}
+
+.phone{
+    position: relative;
+    z-index: 2;
+    width: clamp(13rem, 17vw + .5rem, 17.313rem);
+}
+.car {
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    /* width: 90%; */
+    /* width: clamp(5rem, 5vw ,36.563rem); */
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+.vector {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: clamp(16rem, 32vw + 1rem, 25rem);
+    opacity: 0.8;
+
+}
+    @media (min-width:1441px) {
+        .vector {
+            width: 80%;
+        }
+
+    }
+
+.line {
+    position: absolute;
+    left: 3.8%;
+    right: 41.6%;
+    top: 9.3%;
+    bottom: 93.3%;
+}
+@media (max-width:1140px) {
+    .line {
+        display: none;
+    }
+}
+.decoration {
+    position: absolute;
+    top: 8.3%;
+    left: 11.7%;
+}
+.chartab {
+    position: absolute;
+    top: -1%;
+    right: 4%;
+    z-index: -1;
+    width: clamp(6rem, 11vw + 1rem, 61rem);
+}
+@media (min-width:580px) and (max-width:1056px) {
+    .chartab {
+        top: 5%;
+        right: -14%;
+    }
+    
+}
+@media (min-width:580px) and (max-width:892px) {
+    .chartab {
+        top: 5%;
+        right: -22%;
+    }
+}
+@media (min-width:1445px) {
+    .chartab {
+        right: -2%;
+    }
+}
+
+/*BENEFITS*/
+/****************************************/
+.benefits {
+    width: inherit;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+    display: none;
+}
+.benefits h2 {
+    margin: 7.938rem 0 5rem 0;
+    /* font-size: 3.438rem; */
+    font-size: clamp(1.6rem, 3vw + 1rem, 3.439rem);
+    font-weight: 700;
+    line-height: 4.063rem;
+    text-align: center;
+
+}
+.benefits-flex > div {
+    text-align: center;
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid rgba(220, 226, 238, 0.25);
+    box-shadow: 0px 10px 20px rgba(38, 45, 118, 0.08);
+    border-radius: 20px;
+    
+}
+.benefits-flex {
+    display: flex;
+    gap: 1rem;
+    margin: 0 2rem; /*12*/
+    
+}
+.benefits-flex img {
+    padding-top: 2.563rem;
+    padding-bottom: 1.125rem;
+}
+.benefits-flex h4 {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+
+}
+.benefits-flex p {
+    padding: 0 1.406rem;
+    padding-bottom: 2.563rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    
+}
+
+@media (max-width:900px) {
+    .benefits-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .benefits-flex {
+        margin: 0 5rem;
+    }    
+}
+@media (max-width:600px) {
+    .benefits-flex {
+        display: flex;
+        flex-direction: column;
+        margin: 0 3em;
+    }
+    .benefits-flex > div {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
